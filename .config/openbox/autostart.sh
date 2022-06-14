@@ -14,7 +14,7 @@ exec >/dev/null 2>&1
 # https://gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html#:~:text=expand_aliases
 [ -z "$BASH" ] || shopt -s expand_aliases
 
-{ [ "$(joyd_launch_apps -g terminal)" = 'urxvt' ]} &
+#{ [ "$(joyd_launch_apps -g terminal)" = 'urxvt' ]} &
 
 #{ pidof -s pulseaudio -q || pulseaudio --start --log-target=syslog; } &
 
