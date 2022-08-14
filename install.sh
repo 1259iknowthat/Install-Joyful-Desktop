@@ -4,7 +4,7 @@ echo 'deb http://download.opensuse.org/repositories/home:/Head_on_a_Stick:/obmen
 curl -fsSL https://download.opensuse.org/repositories/home:Head_on_a_Stick:obmenu-generator/Debian_10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_Head_on_a_Stick_obmenu-generator.gpg > /dev/null
 sudo apt update
 echo 'Install requirements'
-sudo apt install python-is-python3 git rsync xserver-xorg-core x11-xserver-utils psmisc dunst nitrogen openbox rofi rxvt-unicode tint2 libgtk3-perl obmenu-generator pulseaudio mpd mpc ncmpcpp alsa-utils brightnessctl imagemagick scrot w3m-img wireless-tools xclip xsettingsd xss-lock thunar thunar-archive-plugin thunar-volman ffmpegthumbnailer tumbler htop nano neofetch geany gimp gsimplecal inkscape mpv parcellite pavucontrol viewnior xfce4-power-manager plank
+sudo apt install python-is-python3 git rsync xserver-xorg-core x11-xserver-utils psmisc dunst nitrogen openbox rofi rxvt-unicode tint2 libgtk3-perl obmenu-generator pulseaudio mpd mpc ncmpcpp alsa-utils brightnessctl imagemagick scrot w3m-img wireless-tools xclip xsettingsd xss-lock thunar thunar-archive-plugin thunar-volman ffmpegthumbnailer tumbler htop nano neofetch geany gimp gsimplecal inkscape mpv parcellite pavucontrol viewnior xfce4-power-manager 
 echo 'Is it successdfull'
 read
 echo "Install font"
@@ -66,4 +66,3 @@ EXCLUD
 fc-cache -rv
 #run
 xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/show-tray-icon -n -t bool -s true
-cp /etc/xdg/openbox/autostart /tmp/autostart && echo "plank &" >> /tmp/autostart && sudo mv /tmp/autostart /etc/xdg/openbox/autostart
