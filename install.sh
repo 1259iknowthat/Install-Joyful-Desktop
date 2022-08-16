@@ -8,7 +8,7 @@ printf ${RED}'Install requirements\n'
 sudo apt install python-is-python3 git rsync xserver-xorg-core x11-xserver-utils psmisc dunst nitrogen openbox rofi rxvt-unicode tint2 libgtk3-perl obmenu-generator pulseaudio mpd mpc ncmpcpp alsa-utils brightnessctl imagemagick scrot w3m-img wireless-tools xclip xsettingsd xss-lock thunar thunar-archive-plugin thunar-volman ffmpegthumbnailer tumbler htop nano neofetch geany gimp gsimplecal inkscape mpv parcellite pavucontrol viewnior xfce4-power-manager 
 printf ${RED}'Is it successdfull?\n'
 read
-printf ${RED}'Install font\n"
+printf ${RED}'Install font\n'
 #fonts
 mkdir -pv ~/.fonts/{Cantarell,Comfortaa,IcoMoon-Custom,Nerd-Patched,Unifont}
 
@@ -38,7 +38,7 @@ wget --no-hsts -cN https://github.com/owl4ce/dotfiles/releases/download/ng/{Glad
  sudo ln -vs ~/.icons/Papirus-Custom /usr/share/icons/
 
  sudo ln -vs ~/.icons/Papirus-Dark-Custom /usr/share/icons/
- printf "${RED}Install wallpapers\n"
+ printf ${RED}"Install wallpapers\n"
 #Wallpapers
  mkdir -pv ~/.wallpapers/{mechanical,eyecandy}
 
@@ -51,7 +51,7 @@ wget --no-hsts -cN https://github.com/owl4ce/dotfiles/releases/download/ng/{Glad
  (cd ~/.urxvt/ext/; curl -LO https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font)
 
  (cd ~/.urxvt/ext/; curl -LO https://raw.githubusercontent.com/mina86/urxvt-tabbedex/master/tabbedex)
- printf ${RED}"Finish installation\n"
+printf ${RED}"Configuring......................\n"
 #install
 cd ~/Documents/
 git clone --depth 1 --recurse-submodules https://github.com/owl4ce/dotfiles.git
@@ -66,6 +66,8 @@ rsync -avxHAXP --exclude-from=- dotfiles/EXTRA_JOYFUL/. ~/ << "EXCLUDE"
 neofetch
 EXCLUDE
 #check fonts
+printf ${RED}"Check fonts\n"
 fc-cache -rv
 #run
+printf ${RED}"Show power-manager\n"
 xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/show-tray-icon -n -t bool -s true
