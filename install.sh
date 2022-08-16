@@ -32,26 +32,27 @@ mkdir -pv ~/.icons
 
 wget --no-hsts -cN https://github.com/owl4ce/dotfiles/releases/download/ng/{Gladient_JfD,Papirus{,-Dark}-Custom}.tar.xz
 
- tar -xf Gladient_JfD.tar.xz -C ~/.icons/
- tar -xf Papirus-Custom.tar.xz -C ~/.icons/
- tar -xf Papirus-Dark-Custom.tar.xz -C ~/.icons/
+tar -xf Gladient_JfD.tar.xz -C ~/.icons/
+tar -xf Papirus-Custom.tar.xz -C ~/.icons/
+tar -xf Papirus-Dark-Custom.tar.xz -C ~/.icons/
 
- sudo ln -vs ~/.icons/Papirus-Custom /usr/share/icons/
+sudo ln -vs ~/.icons/Papirus-Custom /usr/share/icons/
 
- sudo ln -vs ~/.icons/Papirus-Dark-Custom /usr/share/icons/
- printf ${RED}"Install wallpapers\n"${GREEN}
+sudo ln -vs ~/.icons/Papirus-Dark-Custom /usr/share/icons/
+printf ${RED}"Install wallpapers\n"${GREEN}
 #Wallpapers
- mkdir -pv ~/.wallpapers/{mechanical,eyecandy}
+mkdir -pv ~/.wallpapers/{mechanical,eyecandy}
 
- wget --no-hsts -cNP ~/.wallpapers/mechanical/ https://github.com/owl4ce/dotfiles/releases/download/ng/{batik-1_4K,okita-souji_FHD}.jpg
+wget --no-hsts -cNP ~/.wallpapers/mechanical/ https://github.com/owl4ce/dotfiles/releases/download/ng/{batik-1_4K,okita-souji_FHD}.jpg
 
- wget --no-hsts -cNP ~/.wallpapers/eyecandy/ https://github.com/owl4ce/dotfiles/releases/download/ng/{cherry-blossoms,floral-artistic-2}_FHD.jpg
+wget --no-hsts -cNP ~/.wallpapers/eyecandy/ https://github.com/owl4ce/dotfiles/releases/download/ng/{cherry-blossoms,floral-artistic-2}_FHD.jpg
 #ext
-  mkdir -pv ~/.urxvt/ext
+printf ${RED}"Install extensions for urxvt\n"${GREEN}
+mkdir -pv ~/.urxvt/ext
 
- (cd ~/.urxvt/ext/; curl -LO https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font)
+(cd ~/.urxvt/ext/; curl -LO https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font)
 
- (cd ~/.urxvt/ext/; curl -LO https://raw.githubusercontent.com/mina86/urxvt-tabbedex/master/tabbedex)
+(cd ~/.urxvt/ext/; curl -LO https://raw.githubusercontent.com/mina86/urxvt-tabbedex/master/tabbedex)
 printf ${RED}"Configuring......................\n"${GREEN}
 #install
 cd ~/Documents/
