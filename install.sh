@@ -4,11 +4,11 @@ sudo apt install curl
 echo 'deb http://download.opensuse.org/repositories/home:/Head_on_a_Stick:/obmenu-generator/Debian_10/ /' | sudo tee /etc/apt/sources.list.d/home:Head_on_a_Stick:obmenu-generator.list
 curl -fsSL https://download.opensuse.org/repositories/home:Head_on_a_Stick:obmenu-generator/Debian_10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_Head_on_a_Stick_obmenu-generator.gpg > /dev/null
 sudo apt update
-printf '${RED}Install requirements\n'
+printf ${RED}'Install requirements\n'
 sudo apt install python-is-python3 git rsync xserver-xorg-core x11-xserver-utils psmisc dunst nitrogen openbox rofi rxvt-unicode tint2 libgtk3-perl obmenu-generator pulseaudio mpd mpc ncmpcpp alsa-utils brightnessctl imagemagick scrot w3m-img wireless-tools xclip xsettingsd xss-lock thunar thunar-archive-plugin thunar-volman ffmpegthumbnailer tumbler htop nano neofetch geany gimp gsimplecal inkscape mpv parcellite pavucontrol viewnior xfce4-power-manager 
-printf '${RED}Is it successdfull?\n'
+printf ${RED}'Is it successdfull?\n'
 read
-printf "${RED}Install font\n"
+printf ${RED}'Install font\n"
 #fonts
 mkdir -pv ~/.fonts/{Cantarell,Comfortaa,IcoMoon-Custom,Nerd-Patched,Unifont}
 
@@ -25,7 +25,7 @@ wget --no-hsts -cNP ~/.fonts/Unifont/ https://unifoundry.com/pub/unifont/unifont
 wget --no-hsts -cN https://download-fallback.gnome.org/sources/cantarell-fonts/0.303/cantarell-fonts-0.303.1.tar.xz
 
 tar -xvf cantarell*.tar.xz --strip-components 2 --wildcards -C ~/.fonts/Cantarell/ \*/\*/Cantarell-VF.otf
-printf "${RED}Install icons\n"
+printf ${RED}"Install icons\n"
 #icons
 mkdir -pv ~/.icons
 
@@ -51,7 +51,7 @@ wget --no-hsts -cN https://github.com/owl4ce/dotfiles/releases/download/ng/{Glad
  (cd ~/.urxvt/ext/; curl -LO https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font)
 
  (cd ~/.urxvt/ext/; curl -LO https://raw.githubusercontent.com/mina86/urxvt-tabbedex/master/tabbedex)
- printf "${RED}Finish installation\n"
+ printf ${RED}"Finish installation\n"
 #install
 cd ~/Documents/
 git clone --depth 1 --recurse-submodules https://github.com/owl4ce/dotfiles.git
@@ -64,7 +64,7 @@ EXCLUDE
 rsync -avxHAXP --exclude-from=- dotfiles/EXTRA_JOYFUL/. ~/ << "EXCLUDE"
 .git*
 neofetch
-EXCLUD
+EXCLUDE
 #check fonts
 fc-cache -rv
 #run
