@@ -6,4 +6,4 @@ Install [rofi(1.7.1+)](https://packages.debian.org/search?keywords=rofi)
 
 https://ubuntu.pkgs.org/22.04/ubuntu-universe-amd64/rofi_1.7.1-0.1_amd64.deb.html
 
-copy rofi binary to /usr/bin if your rofi version is older than 1.7.1
+copy rofi binary to /usr/bin (rename binary to "rofi") if your rofi version is older than 1.7.1
