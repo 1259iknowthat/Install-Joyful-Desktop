@@ -5,6 +5,7 @@
 URxvt.font:                       xft:mplus Nerd Font Mono:size=11:autohint=true,\
                                   xft:MesloLGS NF:size=11:autohint=false,\
                                   xft:Noto Color Emoji:size=9:antialias=false,\
+                                  xft:Symbola:style=Regular:size=9:antialias=false:autohint=true,\
                                   xft:Monospace:size=11:autohint=true,\
                                   xft:Unifont:size=11:autohint=true
 URxvt.geometry:                   84x16
