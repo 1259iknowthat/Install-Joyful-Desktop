@@ -8,7 +8,7 @@ sudo apt update
 printf ${RED}'Install requirements\n'${GREEN}
 sudo apt install python-is-python3 git rsync xserver-xorg-core x11-xserver-utils psmisc dunst nitrogen openbox rofi rxvt-unicode tint2 libgtk3-perl obmenu-generator pulseaudio mpd mpc ncmpcpp alsa-utils brightnessctl imagemagick scrot w3m-img wireless-tools xclip xsettingsd xss-lock thunar thunar-archive-plugin thunar-volman ffmpegthumbnailer tumbler htop nano neofetch geany gimp gsimplecal inkscape mpv parcellite pavucontrol viewnior xfce4-power-manager 
 printf ${RED}'Is it successdfull?\n'${GREEN}
-read
+read a
 printf ${RED}'Install font\n'${GREEN}
 #fonts
 mkdir -pv ~/.fonts/{Cantarell,Comfortaa,IcoMoon-Custom,Nerd-Patched,Unifont}
